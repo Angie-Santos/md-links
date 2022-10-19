@@ -16,6 +16,8 @@ function verifyPath(path) {
   }
 }
 
+console.log(verifyPath('test'));
+
 module.exports = {
   verifyPath, normalizePath,
 };
