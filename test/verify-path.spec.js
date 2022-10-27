@@ -9,6 +9,7 @@ describe('function Verify Path', () => {
       '/home/angie/Laboratoria/md-links/test/docs/dir/dir2/file3.md',
       '/home/angie/Laboratoria/md-links/test/docs/file1.md',
       '/home/angie/Laboratoria/md-links/test/docs/file2.md',
+      '/home/angie/Laboratoria/md-links/test/docs/mdHTTP.md',
     ]);
   });
   it('Path is ok and is a File', () => {

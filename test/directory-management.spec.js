@@ -9,6 +9,7 @@ describe('function directoryManagment', () => {
       'test/docs/dir/dir2/file3.md',
       'test/docs/file1.md',
       'test/docs/file2.md',
+      'test/docs/mdHTTP.md',
     ]);
   });
 });
