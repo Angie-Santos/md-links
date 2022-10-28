@@ -15,19 +15,27 @@ describe('mdLinks', () => {
       text: 'Node.js',
       file: '/home/angie/Laboratoria/md-links/test/docs/file1.md',
     }]));
-  it('Options validate is true', () => expect(mdLinks('test/docs/file1.md', { validate: true })).resolves.toStrictEqual([
-    {
-      href: 'https://es.wikipedia.org/wiki/Markdown',
-      text: 'Markdown',
-      file: '/home/angie/Laboratoria/md-links/test/docs/file1.md',
-      status: 200,
-      ok: 'OK ✅',
-    },
-    {
-      href: 'https://nodejs.org/',
-      text: 'Node.js',
-      file: '/home/angie/Laboratoria/md-links/test/docs/file1.md',
-      status: 200,
-      ok: 'OK ✅',
-    }]));
+  it('Options validate is true', () => {
+    const output = [
+      {
+        href: 'https://es.wikipedia.org/wiki/Markdown',
+        text: 'Markdown',
+        file: '/home/angie/Laboratoria/md-links/test/docs/file1.md',
+        status: 200,
+        ok: 'OK ✅',
+      },
+      {
+        href: 'https://nodejs.org/',
+        text: 'Node.js',
+        file: '/home/angie/Laboratoria/md-links/test/docs/file1.md',
+        status: 200,
+        ok: 'OK ✅',
+      }];
+
+    mdLinks('test/docs/file1.md', { validate: true }).then((links) => {
+      const set = new Set(links.map(JSON.stringify));
+      const arrSinDuplicaciones = Array.from(set).map(JSON.parse);
+      expect(arrSinDuplicaciones).toStrictEqual(output);
+    });
+  });
 });
