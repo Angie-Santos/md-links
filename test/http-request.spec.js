@@ -41,7 +41,7 @@ describe('function http request', () => {
         file: '/home/angie/Laboratoria/md-links/test/docs/mdHTTP.md',
       },
       {
-        href: '(https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Functions',
+        href: 'https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Functions',
         text: 'Funciones — bloques de código reutilizables - MDN',
         file: '/home/angie/Laboratoria/md-links/test/docs/mdHTTP.md',
       }];
@@ -54,12 +54,12 @@ describe('function http request', () => {
       ok: 'Fail ❌',
     },
     {
-      href: '(https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Functions',
+      href: 'https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Functions',
       text: 'Funciones — bloques de código reutilizables - MDN',
       file: '/home/angie/Laboratoria/md-links/test/docs/mdHTTP.md',
       status: 404,
       ok: 'Fail ❌',
     }];
-    // return expect(httpRequest(obj)).resolves.toEqual(objOutput);
+    return expect(httpRequest(obj)).resolves.toEqual(objOutput);
   });
 });
