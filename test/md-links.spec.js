@@ -32,7 +32,7 @@ describe('mdLinks', () => {
         ok: 'OK ✅',
       }];
 
-    mdLinks('test/docs/file1.md', { validate: true }).then((links) => {
+    return mdLinks('test/docs/file1.md', { validate: true }).then((links) => {
       const set = new Set(links.map(JSON.stringify));
       const arrSinDuplicaciones = Array.from(set).map(JSON.parse);
       expect(arrSinDuplicaciones).toStrictEqual(output);
