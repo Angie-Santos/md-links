@@ -1,6 +1,12 @@
 const { mdLinks } = require('../lib/index');
+const { mdFiles } = require('../lib/directory-management');
 
 describe('mdLinks', () => {
+  beforeEach(() => {
+    while (mdFiles.length > 0) {
+      mdFiles.pop();
+    }
+  });
   it('Is a function', () => {
     expect(typeof mdLinks).toBe('function');
   });
@@ -31,11 +37,6 @@ describe('mdLinks', () => {
         status: 200,
         ok: 'OK ✅',
       }];
-
-    return mdLinks('test/docs/file1.md', { validate: true }).then((links) => {
-      const set = new Set(links.map(JSON.stringify));
-      const arrSinDuplicaciones = Array.from(set).map(JSON.parse);
-      expect(arrSinDuplicaciones).toStrictEqual(output);
-    });
+    return expect(mdLinks('test/docs/file1.md', { validate: true })).resolves.toStrictEqual(output);
   });
 });
