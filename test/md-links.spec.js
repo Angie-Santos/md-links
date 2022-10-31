@@ -39,4 +39,24 @@ describe('mdLinks', () => {
       }];
     return expect(mdLinks('test/docs/file1.md', { validate: true })).resolves.toStrictEqual(output);
   });
+  it('If options and options validate is false', () => {
+    const output = [
+      {
+        href: 'https://es.wikipedia.org/wiki/Markdown',
+        text: 'Markdown',
+        file: '/home/angie/Laboratoria/md-links/test/docs/file1.md',
+      },
+      {
+        href: 'https://nodejs.org/',
+        text: 'Node.js',
+        file: '/home/angie/Laboratoria/md-links/test/docs/file1.md',
+      }];
+    return expect(mdLinks('test/docs/file1.md', { validate: false })).resolves.toStrictEqual(output);
+  });
+
+  it('Option is not valid', () => expect(mdLinks('test/docs/file1.md', 'true')).rejects.toThrow(new Error('Option argument is not valid')));
+
+  it('No path', () => expect(mdLinks()).rejects.toThrow(new Error('you did not enter path')));
+
+  it('Path does not exist or is broken', () => expect(mdLinks('tests')).rejects.toThrow(new Error(('path does not exist or is broken'))));
 });
