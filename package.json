@@ -2,7 +2,7 @@
   "name": "md-links",
   "version": "1.0.0",
   "description": "Library that reads markdown files and checks if they contain links and checks their status",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "directories": {
     "test": "test"
   },
@@ -16,10 +16,14 @@
   "keywords": [
     "node.js",
     "javascript",
-    "jest"
+    "jest",
+    "markdown"
   ],
   "author": "Angie Santos <ajsag12@gmail.com>",
   "license": "MIT",
+  "bin":{
+    "md-links": "lib/cli.js"
+  },
   "bugs": {
     "url": "https://github.com/Angie-Santos/md-links/issues"
   },
