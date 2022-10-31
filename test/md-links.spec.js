@@ -2,7 +2,7 @@ const { mdLinks } = require('../lib/index');
 const { mdFiles } = require('../lib/directory-management');
 
 describe('mdLinks', () => {
-  beforeEach(() => {
+  afterEach(() => {
     while (mdFiles.length > 0) {
       mdFiles.pop();
     }
