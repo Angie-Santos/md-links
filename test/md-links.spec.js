@@ -62,7 +62,7 @@ describe('mdLinks', () => {
 
   it('File is not md', () => expect(mdLinks('test/docs/file1.txt')).rejects.toThrow(new Error(('File isn`t md'))));
 
-  it('Folder does not contain files', () => expect(mdLinks('test/docs/dir-empty')).rejects.toThrow(new Error(('Folder does not contain md files'))));
+  it('Folder does not contain files', () => expect(mdLinks('test/docs/dir-empty')).rejects.toThrow(new Error(('Folder is empty'))));
 
   it('Folder does not contain md files', () => expect(mdLinks('test/docs/dir-not-md')).rejects.toThrow(new Error(('Folder does not contain md files'))));
 });
