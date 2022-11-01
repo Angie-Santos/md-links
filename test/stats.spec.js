@@ -20,6 +20,16 @@ describe('function stats', () => {
     return expect(stats(obj)).toStrictEqual({ total: 2, unique: 2 });
   });
 
+  it('File no contain links', () => {
+    const obj = [
+      {
+        href: 'no links found',
+        text: 'no links found',
+        file: '/home/angie/Laboratoria/md-links/test/docs/file2.md',
+      }];
+    return expect(stats(obj)).toStrictEqual({ total: 0, unique: 0 });
+  });
+
   it('Stats and validate', () => {
     const obj = [
       {

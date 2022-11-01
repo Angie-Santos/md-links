@@ -61,4 +61,8 @@ describe('mdLinks', () => {
   it('Path does not exist or is broken', () => expect(mdLinks('tests')).rejects.toThrow(new Error(('path does not exist or is broken'))));
 
   it('File is not md', () => expect(mdLinks('test/docs/file1.txt')).rejects.toThrow(new Error(('File isn`t md'))));
+
+  it('Folder does not contain files', () => expect(mdLinks('test/docs/dir-empty')).rejects.toThrow(new Error(('Folder does not contain md files'))));
+
+  it('Folder does not contain md files', () => expect(mdLinks('test/docs/dir-not-md')).rejects.toThrow(new Error(('Folder does not contain md files'))));
 });
