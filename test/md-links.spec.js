@@ -59,4 +59,6 @@ describe('mdLinks', () => {
   it('No path', () => expect(mdLinks()).rejects.toThrow(new Error('you did not enter path')));
 
   it('Path does not exist or is broken', () => expect(mdLinks('tests')).rejects.toThrow(new Error(('path does not exist or is broken'))));
+
+  it('File is not md', () => expect(mdLinks('test/docs/file1.txt')).rejects.toThrow(new Error(('File isn`t md'))));
 });
