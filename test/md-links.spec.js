@@ -1,4 +1,4 @@
-const { mdLinks } = require('../lib/index');
+const mdLinks = require('../lib/index');
 const { mdFiles } = require('../lib/directory-management');
 
 describe('mdLinks', () => {
