@@ -37,6 +37,8 @@ Esto es muy útil dado que los archivos `Markdown` normalmente contienen _links_
   - Links no repetidos.
   - Links funcionales (cuya petición http fue exitosa).
 
+Si desea saber más sobre la lógica implementada, observa el [diagrama de flujo](https://miro.com/app/board/uXjVPPgBYpc=/?share_link_id=982462006443)  
+
 ## 4. Guía de uso
 
 ### 1) JavaScript API
