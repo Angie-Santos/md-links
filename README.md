@@ -23,7 +23,7 @@ Esto es muy útil dado que los archivos `Markdown` normalmente contienen _links_
 
 ## 2. Instalación
 ```
-  instalacion aqui
+  npm i angie-santos-md-links
 ```
 ## 3. Detalles técnicos
 
@@ -75,7 +75,7 @@ Con `validate:true` :
 #### Ejemplo (resultados como comentarios)
 
 ```js
-const mdLinks = require("md-links");
+const mdLinks = require("angie-santos-md-links");
 
 mdLinks("./some/example.md")
   .then(links => {
