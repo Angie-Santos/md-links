@@ -22,7 +22,7 @@
   "author": "Angie Santos <ajsag12@gmail.com>",
   "license": "MIT",
   "bin": {
-    "md-links": "lib/cli.js"
+    "md-links": "bin/cli.js"
   },
   "bugs": {
     "url": "https://github.com/Angie-Santos/md-links/issues"

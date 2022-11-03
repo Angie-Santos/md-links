@@ -2,8 +2,8 @@
 /* eslint-disable no-console */
 const figlet = require('figlet');
 const chalk = require('chalk');
-const mdLinks = require('./index');
-const { stats } = require('./stats');
+const mdLinks = require('../lib/index');
+const { stats } = require('../lib/stats');
 
 function cli() {
   console.log(chalk.cyanBright(figlet.textSync('MD-LINKS', {
