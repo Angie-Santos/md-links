@@ -1,6 +1,6 @@
 {
   "name": "angie-santos-md-links",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Library that reads markdown files and checks if they contain links and checks their status",
   "main": "lib/index.js",
   "directories": {
