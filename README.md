@@ -23,7 +23,7 @@ Esto es muy útil dado que los archivos `Markdown` normalmente contienen _links_
 
 ## 2. Instalación
 ```
-  npm i angie-santos-md-links
+  npm i -g angie-santos-md-links
 ```
 ## 3. Detalles técnicos
 
